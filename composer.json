@@ -1,0 +1,15 @@
+{
+    "name": "weliton/leks",
+    "autoload": {
+        "psr-4": {
+            "Weliton\\Leks\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "weliton",
+            "email": "welingtonzsilva@gmail.com"
+        }
+    ],
+    "require": {}
+}

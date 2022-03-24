@@ -5,6 +5,7 @@ use DateTime;
 
 class User
 {
+    // apelidos pode vir vazia e pode ser alterado
     private string $name;
     private string $lastName;
     private ?string $alias;
@@ -44,7 +45,7 @@ class User
        
     }
 
-
+    // Mostra a idade atual do Usuario
     public function age():string
     {
         $hj = date('Y');
@@ -54,4 +55,3 @@ class User
 
 }
 
-$teste =  new User('weliton','silva','welitinho da massa',new DateTime('1986/06/10'));

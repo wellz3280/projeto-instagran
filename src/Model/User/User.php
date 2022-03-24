@@ -3,27 +3,41 @@
 
 use DateTime;
 
-class User
+abstract class User
 {
-    // apelidos pode vir vazia e pode ser alterado
-    private string $name;
-    private string $lastName;
-    private ?string $alias;
-    private DateTime $birthDate;
+    
+    protected string $name;
+    protected string $lastName;
+    protected ?string $alias; // apelidos pode vir vazia e pode ser alterado
+    protected DateTime $birthDate;
+    protected Email $email;
+    protected Phone $phone;
+    protected Pass $pass;
 
-    public function __construct(string $name,string $lastName,?string $alias,DateTime $birthDate)
+    public function __construct(
+        string $name,
+        string $lastName,
+        ?string $alias,
+        DateTime $birthDate,
+        Email $email,
+        Phone $phone,
+        Pass $pass
+    )
     {
         $this->name = $name;
         $this->lastName = $lastName;
         $this->alias = $alias;
         $this->birthDate = $birthDate;
+        $this->email = $email;
+        $this->phone = $phone;
+        $this->pass = $pass;
     }
 
     public function getName():string
     {
         return $this->name;
     }
-
+    
     public function getLastName():string
     {
         return $this->lastName;

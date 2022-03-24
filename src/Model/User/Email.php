@@ -3,6 +3,7 @@
 
 class Email
 {
+    // classe retorna um bollean
     private string $email;
 
     public function __construct(string $email)
